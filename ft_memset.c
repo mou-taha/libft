@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
-
 void *ft_memset(void *dest, int c, size_t count)
 {
     unsigned char *d = (unsigned char*)dest;
