@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include "libft.h"
 
 unsigned int ft_strlcat(char *dst, char *src, unsigned int size)
 {
     int i = 0;
-    int lend = lend;
+    unsigned int lend = lend;
 
     while (dst[lend])
         lend++;
@@ -22,13 +22,13 @@ unsigned int ft_strlcat(char *dst, char *src, unsigned int size)
     return lend;
 }
 
-int main()
-{
-    char *src = " worldsdasded";
-    char dest[12]="hello";
+// int main()
+// {
+//     char *src = " worldsdasded";
+//     char dest[12]="hello";
 
-    ft_strlcat(dest, src, sizeof(dest));
+//     ft_strlcat(dest, src, sizeof(dest));
 
-    printf("result : %s\n", dest);
-    return (0);
-}
+//     printf("result : %s\n", dest);
+//     return (0);
+// }

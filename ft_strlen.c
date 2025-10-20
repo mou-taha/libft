@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 int ft_strlen(const char *s)
 {
@@ -9,8 +9,8 @@ int ft_strlen(const char *s)
     return (i);
 }
 
-int main()
-{
-    printf("%d\n",ft_strlen("55555555"));
-    return (0);
-}
+// int main()
+// {
+//     printf("%d\n",ft_strlen("55555555"));
+//     return (0);
+// }

@@ -1,9 +1,8 @@
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 unsigned int ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
-    int i = 0;
+    unsigned int i = 0;
     int lens = 0;
 
     while (src[lens])
@@ -22,13 +21,13 @@ unsigned int ft_strlcpy(char *dest, const char *src, unsigned int size)
     return lens;
 }
 
-int main()
-{
-    char *src = "hello";
-    char dest[5];
+// int main()
+// {
+//     char *src = "hello";
+//     char dest[5];
 
-    ft_strlcpy(dest, src, sizeof(dest));
+//     ft_strlcpy(dest, src, sizeof(dest));
 
-    printf("result : %d\n", sizeof(dest));
-    return (0);
-}
+//     printf("result : %d\n", sizeof(dest));
+//     return (0);
+// }
