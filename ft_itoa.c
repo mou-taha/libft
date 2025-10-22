@@ -30,18 +30,39 @@ char *ft_itoa(int n)
 {
 	char *res;
 	char *result = res;
+	char *result1 = res;
+    int sign;
+    char tmp_char;
+    
+    if(n < 0)
+    {
+        n *=-1;
+        sign = -1; 
+    }
 	while (n)
 	{
-		*result++=n % 10;
+		*result++= '0' + n % 10;
 		n = n / 10;
 	}
+    if(sign == -1)
+        *result++= '-';
+    *result--= '\0';
+      // Reverse the string
+	printf("result %s\n",result);
+	printf("res %s\n",res);
+	printf("result1 %s\n",result1);
 
-	return result;
+    while(result1 < result) {
+        tmp_char = *result;
+        *result--= *result1;
+        *result1++ = tmp_char;
+    }
+	return res;
 }
 
 
 int main()
 {
 	char *res;
-	printf("res %s\n",ft_itoa(7890));
+	printf("res final%s\n",ft_itoa(-518541185));
 }
