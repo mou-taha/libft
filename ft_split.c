@@ -30,32 +30,32 @@ char **ft_split(char const *s, char c)
 	return (res);
 }
 
-int main(void)
-{
-	char *input = "hello,world,!";
-	char sep = ',';
-	int j, count = 1;
+// int main(void)
+// {
+// 	char *input = "hello,world,!";
+// 	char sep = ',';
+// 	int j, count = 1;
 
-	/* count expected tokens (separators + 1) */
-	for (j = 0; input[j]; j++)
-		if (input[j] == sep)
-			count++;
+// 	/* count expected tokens (separators + 1) */
+// 	for (j = 0; input[j]; j++)
+// 		if (input[j] == sep)
+// 			count++;
 
-	char **res = ft_split(input, sep);
-	if (!res)
-	{
-		fprintf(stderr, "ft_split returned NULL\n");
-	}
-	else
-	{
-		for (j = 0; j < count; j++)
-		{
-			printf("res[%d] = %s\n", j, res[j] ? res[j] : "(null)");
-			free(res[j]); /* free individual strings; main will free the array */
-		}
-	}
+// 	char **res = ft_split(input, sep);
+// 	if (!res)
+// 	{
+// 		fprintf(stderr, "ft_split returned NULL\n");
+// 	}
+// 	else
+// 	{
+// 		for (j = 0; j < count; j++)
+// 		{
+// 			printf("res[%d] = %s\n", j, res[j] ? res[j] : "(null)");
+// 			free(res[j]); /* free individual strings; main will free the array */
+// 		}
+// 	}
 
-	free(res);
+// 	free(res);
 
-	return (0);
-}
+// 	return (0);
+// }
