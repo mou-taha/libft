@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -30,7 +29,7 @@ int ft_atoi(const char *str)
 	return (int)(result * sign);
 }
 
-int main (void)
-{
-	printf("result : %d\n",ft_atoi("	 -54518*1df6585"));
-}
+// int main (void)
+// {
+// 	printf("result : %d\n",ft_atoi("	 -54518*1df6585"));
+// }

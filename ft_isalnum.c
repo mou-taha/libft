@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdbool.h>
+#include "libft.h"
 
 int    ft_isalnum(int c)
 {
@@ -9,33 +7,33 @@ int    ft_isalnum(int c)
     return (0);
 }
 
-void test_isalnum(char c, bool expected_result) {
-    int result = ft_isalnum(c);
-    printf("Testing '%c' (ASCII %d): isalnum() returned %d. Expected: %s. %s\n", 
-           c, (int)c, result, expected_result ? "Non-zero" : "Zero",
-           ((result != 0) == expected_result) ? "PASS" : "FAIL");
-}
+// void test_isalnum(char c, bool expected_result) {
+//     int result = ft_isalnum(c);
+//     printf("Testing '%c' (ASCII %d): isalnum() returned %d. Expected: %s. %s\n",
+//            c, (int)c, result, expected_result ? "Non-zero" : "Zero",
+//            ((result != 0) == expected_result) ? "PASS" : "FAIL");
+// }
 
-int main() {
-    // Positive Test Cases
-    test_isalnum('A', true);
-    test_isalnum('Z', true);
-    test_isalnum('m', true);
-    test_isalnum('a', true);
-    test_isalnum('0', true);
-    test_isalnum('9', true);
+// int main() {
+//     // Positive Test Cases
+//     test_isalnum('A', true);
+//     test_isalnum('Z', true);
+//     test_isalnum('m', true);
+//     test_isalnum('a', true);
+//     test_isalnum('0', true);
+//     test_isalnum('9', true);
 
-    // Negative Test Cases
-    test_isalnum('!', false);
-    test_isalnum(' ', false);
-    test_isalnum('\t', false);
-    test_isalnum('\n', false);
-    test_isalnum('.', false);
-    test_isalnum('\0', false); // Null terminator
+//     // Negative Test Cases
+//     test_isalnum('!', false);
+//     test_isalnum(' ', false);
+//     test_isalnum('\t', false);
+//     test_isalnum('\n', false);
+//     test_isalnum('.', false);
+//     test_isalnum('\0', false); // Null terminator
 
-    // Edge Case
-    printf("Testing EOF: isalnum() returned %d. Expected: Zero. %s\n", 
-           isalnum(EOF), (isalnum(EOF) == 0) ? "PASS" : "FAIL");
+//     // Edge Case
+//     printf("Testing EOF: isalnum() returned %d. Expected: Zero. %s\n",
+//            isalnum(EOF), (isalnum(EOF) == 0) ? "PASS" : "FAIL");
 
-    return 0;
-}
+//     return 0;
+// }

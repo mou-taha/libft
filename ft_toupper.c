@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "libft.h"
 
 int ft_toupper (int c)
 {
@@ -7,12 +7,12 @@ int ft_toupper (int c)
     return (c-32);
 }
 
-int main()
-{
-    char src ='z';
+// int main()
+// {
+//     char src ='z';
 
-    char r=ft_toupper(src);
+//     char r=ft_toupper(src);
 
-    printf("result : %c\n", r);
-    return (0);
-}
+//     printf("result : %c\n", r);
+//     return (0);
+// }

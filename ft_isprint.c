@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "libft.h"
+
 int    ft_isprint(int c)
 {
     if(c>=33 && c<=126)
@@ -6,9 +7,9 @@ int    ft_isprint(int c)
     return (0);
 }
 
-int main()
-{
-    printf("%d\n",ft_isprint('5'));
-    printf("%d\n",ft_isprint(' '));
-    return (0);
-}
+// int main()
+// {
+//     printf("%d\n",ft_isprint('5'));
+//     printf("%d\n",ft_isprint(' '));
+//     return (0);
+// }

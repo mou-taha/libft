@@ -28,12 +28,12 @@ void *ft_memmove(void *dest, const void *src, size_t n) {
     return dest;
 }
 
-int main(void) {
-    char data[] = "ABCDEFGHIJ";
+// int main(void) {
+//     char data[] = "ABCDEFGHIJ";
 
-    printf("Before: %s\n", data);
-    ft_memmove(data + 2, data, 8);   // BIG overlap
-    printf("After memcpy: %s\n", data);
+//     printf("Before: %s\n", data);
+//     ft_memmove(data + 2, data, 8);   // BIG overlap
+//     printf("After memcpy: %s\n", data);
 
-    return 0;
-}
+//     return 0;
+// }

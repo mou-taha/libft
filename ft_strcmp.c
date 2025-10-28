@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 int ft_strcmp(const char *s1, const char *s2)
 {
@@ -13,10 +13,10 @@ int ft_strcmp(const char *s1, const char *s2)
     return 0;
 }
 
-int main(void)
-{
-    char s1[6]="a";
-    char s2[6]="A";
-    printf("res : %d\n",ft_strcmp(s1,s2));
-    return 0;
-}
+// int main(void)
+// {
+//     char s1[6]="a";
+//     char s2[6]="A";
+//     printf("res : %d\n",ft_strcmp(s1,s2));
+//     return 0;
+// }

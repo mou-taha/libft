@@ -36,11 +36,11 @@ char	*ft_strdup(const char *s)
 	return (res);
 }
 
-int main(void)
-{
-	char src[13] = "hello world!";
-	char *res = ft_strdup(src);
-	printf("res : %s\n", res);
-	free(res);
-	return 0;
-}
+// int main(void)
+// {
+// 	char src[13] = "hello world!";
+// 	char *res = ft_strdup(src);
+// 	printf("res : %s\n", res);
+// 	free(res);
+// 	return 0;
+// }

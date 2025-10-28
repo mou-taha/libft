@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *big, const char *little, unsigned int len)
 {
-    int i;
-    int j;
+    size_t i;
+    size_t j;
 
     if (!*little)
         return (char *)big;
@@ -23,13 +22,13 @@ char *ft_strnstr(const char *big, const char *little, unsigned int len)
     return NULL;
 }
 
-int main(void)
-{
-    const char *largestring = "maflb flo p";
-    const char *smallstring = "flo";
-    char *ptr;
+// int main(void)
+// {
+//     const char *largestring = "maflb flo p";
+//     const char *smallstring = "flo";
+//     char *ptr;
 
-    ptr = ft_strnstr(largestring, smallstring, 10);
-    printf("%s\n", ptr);
-    return 0;
-}
+//     ptr = ft_strnstr(largestring, smallstring, 10);
+//     printf("%s\n", ptr);
+//     return 0;
+// }

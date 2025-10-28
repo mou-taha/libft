@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS =
+CFLAGS = -Wall -Wextra -Werror
 
 SRCS = $(wildcard *.c)
 
@@ -8,7 +8,6 @@ OBJS := $(SRCS:.c=.o)
 NAME = libft.a
 
 all: $(NAME)
-
 
 $(NAME):$(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
