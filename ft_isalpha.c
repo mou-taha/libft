@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int    ft_isalpha(int c)
 {
     if((c>=65 && c<=90) || (c>=97 && c<=122))
@@ -8,7 +9,7 @@ int    ft_isalpha(int c)
 
 int main()
 {
-    printf("%d\n",ft_isdigit('a'));
-    printf("%d\n",ft_isdigit('5'));
+    printf("%d\n",ft_isalpha('a'));
+    printf("%d\n",ft_isalpha('5'));
     return (0);
 }

@@ -25,9 +25,9 @@ unsigned int ft_strlcat(char *dst, char *src, unsigned int size)
 // int main()
 // {
 //     char *src = " worldsdasded";
-//     char dest[12]="hello";
+//     char dest[8]="hello";
 
-//     ft_strlcat(dest, src, sizeof(dest));
+//     ft_strlcat(dest, src, 8);
 
 //     printf("result : %s\n", dest);
 //     return (0);
