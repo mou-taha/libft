@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmousnia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/29 20:24:18 by tmousnia          #+#    #+#             */
+/*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -11,14 +23,14 @@ void *ft_memset(void *dest, int c, size_t count)
     return dest;
 }
 
-int main(void)
-{
-   char buffer[21];
-   void *string;
+// int main(void)
+// {
+//    char buffer[21];
+//    void *string;
 
-   ft_memset(buffer, 0, sizeof(buffer));
-   string = (char *) ft_memset(buffer,'P', 10);
-   printf("\nBuffer contents: %s\n", (char*)string);
-   ft_memset(buffer+10, 'B', 10);
-   printf("\nBuffer contents: %s\n", buffer);
-}
+//    ft_memset(buffer, 0, sizeof(buffer));
+//    string = (char *) ft_memset(buffer,'P', 10);
+//    printf("\nBuffer contents: %s\n", (char*)string);
+//    ft_memset(buffer+10, 'B', 10);
+//    printf("\nBuffer contents: %s\n", buffer);
+// }

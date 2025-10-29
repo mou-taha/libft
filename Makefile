@@ -1,16 +1,22 @@
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = $(wildcard *.c)
+SOURCES = $(wildcard ./*.c)
 
-OBJS := $(SRCS:.c=.o)
+OBJS := $(SOURCES:.c=.o)
 
 NAME = libft.a
+
+ARCMD = ar -rcs
 
 all: $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(ARCMD) $(NAME) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I.
 
 clean:
 	rm -f $(OBJS)
