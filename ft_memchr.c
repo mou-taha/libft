@@ -12,18 +12,21 @@
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, unsigned int n)
 {
-    unsigned char *src = (unsigned char *)s;
-    size_t i = 0;
-    while (src && i < n)
-    {
-        if (*src == c)
-            return src;
-        src++;
-        i++;
-    }
-    return NULL;
+	unsigned char	*src;
+	size_t			i;
+
+	i = 0;
+	*src = (unsigned char *)s;
+	while (src && i < n)
+	{
+		if (*src == c)
+			return (src);
+		src++;
+		i++;
+	}
+	return (NULL);
 }
 
 // int main(void)

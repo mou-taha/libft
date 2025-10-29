@@ -12,18 +12,16 @@
 
 #include "libft.h"
 
-void *ft_calloc(unsigned int nmemb, unsigned int size)
+void	*ft_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *res;
-	unsigned int ttl_bytes;
-	unsigned char *r;
+	void			*res;
+	unsigned int	ttl_bytes;
+	unsigned char	*r;
 
 	ttl_bytes = nmemb * size;
-	if (ttl_bytes ==  0)
-		return NULL;
-
+	if (ttl_bytes == 0)
+		return (NULL);
 	res = malloc(ttl_bytes);
-
 	if (res != NULL)
 	{
 		r = (unsigned char *)res;
