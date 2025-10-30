@@ -9,12 +9,11 @@
 /*   Updated: 2025/10/20 16:55:44 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int ft_strfind(char const *str, char c)
+int	ft_strfind(char const *str, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -26,18 +25,16 @@ int ft_strfind(char const *str, char c)
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	int j;
-	char *res;
+	int		i;
+	int		j;
+	char	*res;
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
-
 	while (ft_strfind(set, s1[i]))
 		i++;
-
 	while (ft_strfind(set, s1[j]))
 		j--;
 	res = ft_substr(s1, i, j - i + 1);

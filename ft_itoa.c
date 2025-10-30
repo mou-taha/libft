@@ -9,73 +9,69 @@
 /*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
+#include "libft.h"
+
+int	count_digit(int n)
+{
+	int	len;
+
+	len = 0;
+	while (n)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
+char	*build_str_rev(char *res, int n, int sign)
+{
+	*res-- = '\0';
+	while (n)
+	{
+		*res-- = '0' + (n % 10);
+		n /= 10;
+	}
+	if (sign == -1)
+		*res = '-';
+	else
+		res++;
+	return (res);
+}
 
 char	*ft_itoa(int n)
 {
 	char	*res;
-	char	*result;
 	int		sign;
 	int		len;
-	int		tmp;
 
 	sign = 1;
 	len = 0;
-	tmp = 0;
-	// Handle 0 case
 	if (n == 0)
 	{
 		res = malloc(2);
 		res[0] = '0';
 		res[1] = '\0';
-		return res;
+		return (res);
 	}
-
-	// Handle negative numbers
 	if (n < 0)
 	{
 		sign = -1;
 		n = -n;
 		len++;
 	}
-
-	// Count digits
-	tmp = n;
-	while (tmp)
-	{
-		tmp /= 10;
-		len++;
-	}
-
-	// Allocate memory (+1 for '\0')
+	len += count_digit(n);
 	res = malloc(len + 1);
 	if (!res)
-		return NULL;
-
-	result = res + len;  // point to end
-	*result-- = '\0';
-
-	// Build the string in reverse
-	while (n)
-	{
-		*result-- = '0' + (n % 10);
-		n /= 10;
-	}
-
-	if (sign == -1)
-		*result = '-';
-	else
-		result++;
-
-	return result;
+		return (NULL);
+	build_str_rev(res + len, n, sign);
+	return (res);
 }
-
-
 
 // int main()
 // {
-// 	char *res = ft_itoa(-518541185);
+// 	char *res = ft_itoa(-84522556);
 // 	printf("res final%s\n",res);
 //     free(res);
 // }

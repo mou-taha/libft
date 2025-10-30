@@ -9,14 +9,13 @@
 /*   Updated: 2025/10/20 16:55:44 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int ft_toupper (int c)
+int	ft_toupper(int c)
 {
-    if(!(c>=97 && c<=122))
-        return c;
-    return (c-32);
+	if (!(c >= 97 && c <= 122))
+		return (c);
+	return (c - 32);
 }
 
 // int main()

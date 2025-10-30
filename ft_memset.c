@@ -9,18 +9,18 @@
 /*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memset(void *dest, int c, size_t count)
+void	*ft_memset(void *dest, int c, size_t count)
 {
-    unsigned char *d = (unsigned char*)dest;
-    size_t i;
-    i = 0;
-    while (i < count)
-        d[i++] = (unsigned char)c;
-    return dest;
+	unsigned char	*d;
+	size_t			i;
+
+	d = (unsigned char *)dest;
+	i = 0;
+	while (i < count)
+		d[i++] = (unsigned char)c;
+	return (dest);
 }
 
 // int main(void)

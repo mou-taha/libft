@@ -9,42 +9,43 @@
 /*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n) {
-    unsigned char *d = dest;
-    const unsigned char *s = src;
-    size_t i;
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
 
-    if (d == s || n == 0) {
-        return dest;
-    }
-
-    if (d < s) {
-        printf("Forward copy\n");
-        i = 0;
-        while (i < n) {
-            d[i] = s[i];
-            i++;
-        }
-    } else {
-        printf("Backward copy\n");
-        i = n;
-        while (i != 0) {
-            i--;
-            d[i] = s[i];
-        }
-    }
-
-    return dest;
+	d = dest;
+	s = src;
+	if (d == s || n == 0)
+		return (dest);
+	if (d < s)
+	{
+		i = 0;
+		while (i < n)
+		{
+			d[i++] = s[i];
+		}
+	}
+	else
+	{
+		i = n;
+		while (i != 0)
+		{
+			d[i] = s[--i];
+		}
+	}
+	return (dest);
 }
 
 // int main(void) {
-//     char data[] = "ABCDEFGHIJ";
+//     char data[20] = "ABCDEFGHIJ";
+//     char s[20] = "123";
 
 //     printf("Before: %s\n", data);
-//     ft_memmove(data + 2, data, 8);   // BIG overlap
+//     ft_memmove(data, s, sizeof(data));   //  overlap
 //     printf("After memcpy: %s\n", data);
 
 //     return 0;

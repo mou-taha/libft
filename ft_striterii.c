@@ -13,12 +13,12 @@
 #include "libft.h"
 #include <ctype.h>
 
-void	ft_striterii(char *s, void (*f)(unsigned int,char*))
+void	ft_striterii(char *s, void (*f)(unsigned int, char*))
 {
 	int		i;
 
 	if (!s || !f)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -27,7 +27,6 @@ void	ft_striterii(char *s, void (*f)(unsigned int,char*))
 	}
 }
 // #include <ctype.h>
-
 // void toggle_case(unsigned int i, char *c)
 // {
 //     if (i % 2 == 0)
@@ -46,4 +45,3 @@ void	ft_striterii(char *s, void (*f)(unsigned int,char*))
 
 //     return 0;
 // }
-

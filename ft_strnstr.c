@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                        :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmousnia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,29 +9,27 @@
 /*   Updated: 2025/10/20 16:55:44 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 {
-    size_t i;
-    size_t j;
+	size_t	i;
+	size_t	j;
 
-    if (!*little)
-        return (char *)big;
-
-    while (big[i] && i < len)
-    {
-        j = 0;
-        while (big[i + j] == little[j] && (i + j) < len)
-        {
-            j++;
-            if (little[j] == '\0')
-                return (char *)&big[i];
-        }
-        i++;
-    }
-    return NULL;
+	if (!*little)
+		return ((char *)big);
+	while (big[i] && i < len)
+	{
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			j++;
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
+		}
+		i++;
+	}
+	return (NULL);
 }
 
 // int main(void)
