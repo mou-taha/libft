@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -26,16 +27,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = 0;
 		while (i < n)
 		{
-			d[i++] = s[i];
+			d[i] = s[i];
+			i++;
 		}
 	}
 	else
 	{
-		i = n;
-		while (i != 0)
-		{
-			d[i] = s[--i];
-		}
+		while (n--)
+			d[n] = s[n];
 	}
 	return (dest);
 }
@@ -45,7 +44,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 //     char s[20] = "123";
 
 //     printf("Before: %s\n", data);
-//     ft_memmove(data, s, sizeof(data));   //  overlap
+//     memmove(data+2, s, sizeof(data));   //  overlap
 //     printf("After memcpy: %s\n", data);
 
 //     return 0;

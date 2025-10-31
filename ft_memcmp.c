@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmousnia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 20:24:18 by tmousnia          #+#    #+#             */
-/*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
+/*   Created: 2025/10/31 21:43:02 by tmousnia          #+#    #+#             */
+/*   Updated: 2025/10/31 21:50:28 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)
 {
-	unsigned char	*src;
-	size_t			i;
+	unsigned char	*src1;
+	unsigned char	*src2;
+	int				i;
 
 	i = 0;
-	src = (unsigned char *)s;
-	while (src && i < n)
+	src1 = (unsigned char *)s1;
+	src2 = (unsigned char *)s2;
+	while (src1[i] && src2[i] && n--)
 	{
-		if (*src == c)
-			return (src);
-		src++;
+		if (src1[i] != src2[i])
+			return (src1[i] - src2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
-
-// int main(void)
-// {
-//     unsigned char src[6] = "hello";
-
-//     char *res=ft_memchr(src, 'o', 10);
-//     printf("res : %s\n",res? "found":"not found");
-//     return(0);
-// }
