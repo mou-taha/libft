@@ -1,30 +1,90 @@
 #include "libft.h"
 
-// int main(void)
-// {
-// 	char *input = "hello,world,!";
-// 	char sep = ',';
-// 	int j, count = 1;
-// 	/* count expected tokens (separators + 1) */
-// 	for (j = 0; input[j]; j++)
-// 		if (input[j] == sep)
-// 			count++;
-// 	char **res = ft_split(input, sep);
-// 	if (!res)
-// 	{
-// 		fprintf(stderr, "ft_split returned NULL\n");
-// 	}
-// 	else
-// 	{
-// 		for (j = 0; j < count; j++)
-// 		{
-// 			printf("res[%d] = %s\n", j, res[j] ? res[j] : "(null)");
-// 			free(res[j]);
-// 		}
-// 	}
-// 	free(res);
-// 	return (0);
-// }
+
+void print_result(char **res) {
+    if (res == NULL) {
+        printf("Error: Memory allocation failed.\n");
+        return;
+    }
+
+    int i = 0;
+    while (res[i]) {
+        printf("Substring %d: \"%s\"\n", i, res[i]);
+        free(res[i]);  // Free each individual substring
+        i++;
+    }
+    free(res);  // Free the array of pointers
+}
+
+int main() {
+
+    // Edge Case 1: Empty String
+    printf("Test 1: Empty String\n");
+    char **result = ft_split("", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 2: No Occurrences of Delimiter
+    printf("Test 2: No Occurrences of Delimiter\n");
+    result = ft_split("HelloWorld", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 3: Single Character String
+    printf("Test 3: Single Character String\n");
+    result = ft_split("A", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 4: Delimiter at the Start of the String
+    printf("Test 4: Delimiter at the Start of the String\n");
+    result = ft_split(",HelloWorld", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 5: Delimiter at the End of the String
+    printf("Test 5: Delimiter at the End of the String\n");
+    result = ft_split("HelloWorld,", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 6: Multiple Consecutive Delimiters
+    printf("Test 6: Multiple Consecutive Delimiters\n");
+    result = ft_split("Hello,,World", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 7: String Consists Only of Delimiters
+    printf("Test 7: String Consists Only of Delimiters\n");
+    result = ft_split(",,,,", ',');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 8: String with Mixed Delimiters (Spaces)
+    printf("Test 8: String with Mixed Delimiters (Spaces)\n");
+    result = ft_split("Hello World! How are you?", ' ');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 9: String with Non-Alphanumeric Delimiters (Punctuation)
+    printf("Test 9: String with Non-Alphanumeric Delimiters (Punctuation)\n");
+    result = ft_split("Hello!World!How", '!');
+    print_result(result);
+    printf("\n");
+
+    // Edge Case 10: String with Very Long Words
+    printf("Test 10: String with Very Long Words\n");
+    result = ft_split("aLongWordHereWithoutAnySpaces", ' ');
+    print_result(result);
+    printf("\n");
+    // Edge Case 11: String with Very Long Words
+    printf("Test 10: String with Very Long Words\n");
+    result = ft_split(NULL, ' ');
+    print_result(result);
+    printf("\n");
+    return 0;
+}
+
 // ANSI color codes
 // #define GREEN   "\033[0;32m"
 // #define RED     "\033[0;31m"
@@ -76,12 +136,12 @@
 //     return 0;
 // }
 
-int main(void) {
-    char data[20] = "ABCDEFGHIJ";
+// int main(void) {
+//     char data[20] = "ABCDEFGHIJ";
 
-    printf("Before: %s\n", data);
-    ft_memmove(data+2, data, sizeof(data));   //  overlap
-    printf("After memcpy: %s\n", data);
+//     printf("Before: %s\n", data);
+//     ft_memmove(data+2, data, sizeof(data));   //  overlap
+//     printf("After memcpy: %s\n", data);
 
-    return 0;
-}
+//     return 0;
+// }
