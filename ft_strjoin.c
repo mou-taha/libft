@@ -16,10 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		size;
 	char	*res;
 
-	size = ft_strlen(s1) + ft_strlen(s2);
-	if (size == 0)
-		return (NULL);
-	res = ft_calloc(size++, sizeof(char));
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	res = ft_calloc(size, sizeof(char));
 	ft_strlcpy(res, (char *) s1, size);
 	ft_strlcat(res, (char *) s2, size);
 	return (res);
@@ -27,7 +25,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // int main(void)
 // {
-// 	char *r=ft_strjoin("","");
-// 	printf("resulr :%s\n",r?r:"null");
+// 	char *r=ft_strjoin("aaa","b");
+// 	int i=0;
+// 	while (r[i])
+// 	{
+// 		printf("result :%c\n",r[i]);
+// 		i++;
+// 	}
+// 	printf("result :%s\n",r);
+
 // 	return(0);
 // }
