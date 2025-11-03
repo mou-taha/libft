@@ -4,9 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SOURCES = $(wildcard *.c)
 
-SOURCES := $(filter-out main.c, $(SOURCES))
-
-OBJS := $(SOURCES:.c=.o)
+OBJS = $(SOURCES:.c=.o)
 
 NAME = libft.a
 
@@ -24,10 +22,6 @@ $(NAME):$(OBJS)
 
 $(TARGET): main.c $(NAME)
 	$(CC) $(CFLAGS) main.c -o $(TARGET) -L. -lft
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
 	rm -f $(OBJS)
