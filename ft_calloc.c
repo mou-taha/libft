@@ -16,7 +16,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void			*res;
 	unsigned int	ttl_bytes;
-	unsigned char	*r;
 
 	if (nmemb && size > SIZE_MAX / nmemb)
 		return (NULL);
