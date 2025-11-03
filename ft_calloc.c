@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void			*res;
 	unsigned int	ttl_bytes;
 
-	if (nmemb && size > SIZE_MAX / nmemb)
+	if (nmemb && (size > 2147483647 / nmemb))
 		return (NULL);
 	ttl_bytes = nmemb * size;
 	res = malloc(ttl_bytes);

@@ -23,10 +23,6 @@ $(NAME):$(OBJS)
 $(TARGET): main.c $(NAME)
 	$(CC) $(CFLAGS) main.c -o $(TARGET) -L. -lft
 
-so:
-	$(CC) -fPIC $(CFLAGS) $(SOURCES)
-	gcc -shared -o libft.so $(OBJS)
-
 clean:
 	rm -f $(OBJS)
 	rm -f $(TARGET)

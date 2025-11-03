@@ -11,24 +11,34 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dst, char *src, unsigned int size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int				i;
-	unsigned int	lend;
+    size_t	lend = 0;
+    size_t	lens;
+	size_t	to_copy;
+	size_t	i;
 
-	i = 0;
-	lend = ft_strlen(dst);
-	if (size > 0)
-	{
-		while (src[i] && lend < size -1)
-		{
-			dst[lend] += src[i];
-			lend++;
-			i++;
-		}
-		dst[lend] = '\0';
-	}
-	return (lend);
+	lens = ft_strlen(src);
+    if (size > 0)
+        while (lend < size && dst[lend] != '\0')
+            lend++;
+    if (lend == size)
+        return (lend + lens);
+
+    to_copy = size - lend - 1;
+    if (to_copy > lens)
+        to_copy = lens;
+
+    i = 0;
+    while (i < to_copy)
+    {
+        dst[lend + i] = src[i];
+        i++;
+    }
+
+    dst[lend + i] = '\0';
+
+    return (lend + lens);
 }
 
 // int main()

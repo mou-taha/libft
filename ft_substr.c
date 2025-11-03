@@ -11,19 +11,36 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+#include <stdlib.h>
+
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	char			*res;
+	size_t	s_len;
+	char	*res;
 
-	i = 0;
-	while (i < start)
+	if (!s)
+		return (NULL);
+
+	s_len = ft_strlen(s);
+	// If start is beyond end of string, return empty string
+	if (start >= s_len)
 	{
-		s++;
-		i++;
+		res = (char *)malloc(1);
+		if (res)
+			res[0] = '\0';
+		return (res);
 	}
-	res = ft_calloc(len, sizeof(char));
-	ft_strlcpy(res, s, len +1);
+
+	// Adjust len so we don't read past end of string
+	if (len > s_len - start)
+		len = s_len - start;
+
+	res = (char *)malloc(len + 1);
+	if (!res)
+		return (NULL);
+
+	ft_memcpy(res, s + start, len);
+	res[len] = '\0';
 	return (res);
 }
 
