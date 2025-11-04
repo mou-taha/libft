@@ -20,9 +20,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-
 	s_len = ft_strlen(s);
-	// If start is beyond end of string, return empty string
 	if (start >= s_len)
 	{
 		res = (char *)malloc(1);
@@ -30,15 +28,11 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 			res[0] = '\0';
 		return (res);
 	}
-
-	// Adjust len so we don't read past end of string
 	if (len > s_len - start)
 		len = s_len - start;
-
 	res = (char *)malloc(len + 1);
 	if (!res)
 		return (NULL);
-
 	ft_memcpy(res, s + start, len);
 	res[len] = '\0';
 	return (res);

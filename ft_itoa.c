@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "libft.h"
 
-int	count_digit(int n)
+int	count_digit(long n)
 {
 	int	len;
 
@@ -25,7 +24,7 @@ int	count_digit(int n)
 	return (len);
 }
 
-char	*build_str_rev(char *res, int n, int sign)
+char	*build_str_rev(char *res, long n, int sign)
 {
 	*res-- = '\0';
 	while (n)
@@ -45,33 +44,26 @@ char	*ft_itoa(int n)
 	char	*res;
 	int		sign;
 	int		len;
+	long	number;
 
+	number = n;
 	sign = 1;
 	len = 0;
-	if (n == 0)
+	if (number == 0)
 	{
-		res = malloc(2);
-		res[0] = '0';
-		res[1] = '\0';
+		res = ft_strdup("0");
 		return (res);
 	}
-	if (n < 0)
+	if (number < 0)
 	{
 		sign = -1;
-		n = -n;
+		number = -number;
 		len++;
 	}
-	len += count_digit(n);
+	len += count_digit(number);
 	res = malloc(len + 1);
 	if (!res)
 		return (NULL);
-	build_str_rev(res + len, n, sign);
+	build_str_rev(res + len, number, sign);
 	return (res);
 }
-
-// int main()
-// {
-// 	char *res = ft_itoa(-84522556);
-// 	printf("res final%s\n",res);
-//     free(res);
-// }

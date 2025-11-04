@@ -22,13 +22,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	s_len = ft_strlen(s);
 	result = malloc(s_len + 1);
+	if (!result)
+		return (NULL);
 	while (s[i] && result)
 	{
 		result[i] = f(i, s[i]);
 		i++;
 	}
+	result[i] = '\0';
 	return (result);
 }
+
 // #include <ctype.h>
 // char upper_even(unsigned int i, char c)
 // {
