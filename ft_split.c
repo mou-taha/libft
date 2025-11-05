@@ -14,25 +14,25 @@
 int	count_strings(char const *s, char c)
 {
 	int	count;
-	int	x;
+	int	flag;
 
 	count = 0;
-	x = 0;
+	flag = 1;
 	while (*s)
 	{
-		if (*s != c && x == 0)
+		if (*s != c && flag == 1)
 		{
-			x = 1;
+			flag = 0;
 			count++;
 		}
 		else if (*s == c)
-			x = 0;
+			flag = 1;
 		s++;
 	}
 	return (count);
 }
 
-static void	*free_all(char **str, int count)
+void	*free_all(char **str, int count)
 {
 	int	i;
 

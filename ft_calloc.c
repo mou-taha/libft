@@ -18,6 +18,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t			ttl_bytes;
 
 	ttl_bytes = nmemb * size;
+	if (ttl_bytes == 0)
+	{
+		res = malloc(1);
+		return (res);
+	}
 	res = malloc(ttl_bytes);
 	if (!res)
 		return (NULL);

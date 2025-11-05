@@ -18,11 +18,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	to_copy;
 	size_t	i;
 
-	lens = ft_strlen(src);
 	lend = 0;
 	if (size > 0)
 		while (lend < size && dst[lend] != '\0')
 			lend++;
+	lens = ft_strlen(src);
 	if (lend == size)
 		return (lend + lens);
 	to_copy = size - lend - 1;

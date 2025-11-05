@@ -35,15 +35,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	res[len] = '\0';
 	return (res);
 }
-
-// int main(void)
-// {
-//     char s[13] = "hello world!";
-//     char *res;
-
-//     res = ft_substr(s, 2, 5);
-//     printf("result : %s\n", res);
-
-//     free(res); // always free what you malloc
-//     return 0;
-// }
