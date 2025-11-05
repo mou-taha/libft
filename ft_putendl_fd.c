@@ -9,7 +9,6 @@
 /*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//TODO:create
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
