@@ -32,13 +32,3 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 	return (lens);
 }
 
-// int main()
-// {
-//     char *src = "hello";
-//     char dest[5];
-
-//     ft_strlcpy(dest, src, sizeof(dest));
-
-//     printf("result : %d\n", sizeof(dest));
-//     return (0);
-// }

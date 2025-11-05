@@ -9,7 +9,6 @@
 /*   Updated: 2025/10/31 21:50:28 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 
 int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)

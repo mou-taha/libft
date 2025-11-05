@@ -22,17 +22,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(res, (char *) s2, size);
 	return (res);
 }
-
-// int main(void)
-// {
-// 	char *r=ft_strjoin("aaa","b");
-// 	int i=0;
-// 	while (r[i])
-// 	{
-// 		printf("result :%c\n",r[i]);
-// 		i++;
-// 	}
-// 	printf("result :%s\n",r);
-
-// 	return(0);
-// }

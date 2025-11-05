@@ -32,19 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-
-// #include <ctype.h>
-// char upper_even(unsigned int i, char c)
-// {
-//     if (i % 2 == 0)
-//         return toupper(c);
-//     return c;
-// }
-// int main(void)
-// {
-//     char *s = "hello world";
-//     char *res = ft_strmapi(s, upper_even);
-
-//     printf("%s\n", res);  // Output: "HeLlO WoRlD"
-//     free(res);
-// }

@@ -9,7 +9,6 @@
 /*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
@@ -28,8 +27,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n % 10) + '0', fd);
 	}
 }
-
-// int main(void)
-// {
-// 	ft_putnbr_fd(-2147483648,1);
-// }

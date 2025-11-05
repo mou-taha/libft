@@ -42,9 +42,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res = ft_substr(s1, i, j - i + 1);
 	return (res);
 }
-
-// int main(void)
-// {
-// 	char const *r="		ahello   * ";
-// 	printf("res :%s\n",ft_strtrim(r," 	*"));
-// }

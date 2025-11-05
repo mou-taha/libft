@@ -37,14 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[lend + i] = '\0';
 	return (lend + lens);
 }
-
-// int main()
-// {
-//     char *src = " worldsdasded";
-//     char dest[20]="hello";
-
-//     ft_strlcat(dest, src, 20);
-
-//     printf("result : %s\n", dest);
-//     return (0);
-// }

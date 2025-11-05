@@ -9,9 +9,7 @@
 /*   Updated: 2025/10/29 20:24:33 by tmousnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -30,15 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-// int main() {
-//     char src[20] = "Hello, World!";
-//     char dest[20];
-
-//     ft_memcpy(dest, src, strlen(src) + 1);  // +1 to copy the null terminator
-
-//     printf("Source: %s\n", src);
-//     printf("Destination: %s\n", dest);
-//     printf("size: %d\n", strlen(src));
-
-//     return 0;
-// }

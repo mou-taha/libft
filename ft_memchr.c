@@ -28,12 +28,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     unsigned char src[6] = "hello";
-
-//     char *res=ft_memchr(src, 'o', 10);
-//     printf("res : %s\n",res? "found":"not found");
-//     return(0);
-// }
