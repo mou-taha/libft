@@ -22,22 +22,3 @@ void	*ft_memset(void *dest, int c, size_t n)
 		d[i++] = (unsigned char)c;
 	return (dest);
 }
-
-int main(void)
-{
-   char buffer[21];
-//    void *string;
-
-//    ft_memset(buffer, 0, sizeof(buffer));
-//    string = (char *) ft_memset(buffer,'P', 10);
-//    printf("\nBuffer contents: %s\n", (char*)string);
-//    ft_memset(buffer+10, 'B', 10);
-//    printf("\nBuffer contents: %s\n", buffer);
-	int a ;
-
-	ft_memset(&a,0b00001101,1);
-    printf("\nBuffer contents: %d\n", a);
-	ft_memset(&a,0b00100101,1);
-    printf("\nBuffer contents: %d\n", a);
-
-}
