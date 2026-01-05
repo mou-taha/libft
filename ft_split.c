@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	count_strings(char const *s, char c)
+static int	count_strings(char const *s, char c)
 {
 	int	count;
 	int	flag;
@@ -32,7 +32,7 @@ int	count_strings(char const *s, char c)
 	return (count);
 }
 
-void	*free_all(char **str, int count)
+static void	*free_all(char **str, int count)
 {
 	int	i;
 

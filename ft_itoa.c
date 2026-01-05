@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	count_digit(long n)
+static int	count_digit(long n)
 {
 	int	len;
 
@@ -24,7 +24,7 @@ int	count_digit(long n)
 	return (len);
 }
 
-char	*build_str_rev(char *res, long n, int sign)
+static char	*build_str(char *res, long n, int sign)
 {
 	*res-- = '\0';
 	while (n)
@@ -64,6 +64,6 @@ char	*ft_itoa(int n)
 	res = malloc(len + 1);
 	if (!res)
 		return (NULL);
-	build_str_rev(res + len, number, sign);
+	build_str(res + len, number, sign);
 	return (res);
 }
